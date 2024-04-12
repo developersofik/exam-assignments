@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body,
+        html {
+            height: 100%;
+        }
+
+        .container {
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-card {
+            width: 360px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .profile-image {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            overflow: hidden;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .btn-action {
+            margin-top: 10px;
+        }
+
+        .pro-badge {
+            background-color: #636363;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .contact-info p {
+            margin: 6px 0px;
+        }
+
+        button.btn.btn-action {
+            border: solid 2px black;
+            padding: 10px 31px;
+            border-radius: 9px;
+            margin: 10px 10px;
+            font-size: 15px;
+            font-weight: 900;
+            font-family: arial;
+        }
+
+        button.btn.btn-hire.btn-action {
+            background: black;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="profile-card position-relative">
+                    <span class="pro-badge">PRO</span>
+                    <div class="profile-image">
+                        <img src="image.png" alt="Profile Picture">
+                    </div>
+                    <h3>Md Sofikul </h3>
+                    <p><b>Web Developer (PHP & Laravel)</b></p>
+                    <p class="text-muted">Experienced PHP & Laravel web developer creating innovative solutions.</p>
+
+                    <div class="contact-info">
+                        <p>Email: Developersofik@gmail.com</p>
+                        <p>Mobile: +8801723866939</p>
+                    </div>
+                    <button class="btn  btn-action">Follow</button>
+                    <button class="btn btn-hire btn-action">Hire Me</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

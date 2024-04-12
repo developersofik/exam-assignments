@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Calculator</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <STYLE>
+    .calculator {
+      width: 300px;
+      margin: 0 auto;
+      background-color: #cdcbcb;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .output {
+
+      font-size: 24px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: white !important;
+      font-family: ui-serif;
+      font-weight: bold;
+    }
+
+    .key {
+      flex: 1;
+      margin: 5px;
+      padding: 15px;
+      font-size: 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </STYLE>
+
+</head>
+
+<body>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-4">
+        <div class="calculator card">
+          <div class="card-head">
+            <h5 class="text-center mb-2">CALCULATOR</h5>
+          </div>
+          <input type="text" id="output" class="form-control mb-3 output" disabled>
+          <div class="keys">
+            <div class="row">
+              <button class="key btn btn-secondary" onclick="appendInput('7')">7</button>
+              <button class="key btn btn-secondary" onclick="appendInput('8')">8</button>
+              <button class="key btn btn-secondary" onclick="appendInput('9')">9</button>
+              <button class="key btn btn-info" onclick="appendInput('+')">+</button>
+            </div>
+            <div class="row">
+              <button class="key btn btn-secondary" onclick="appendInput('4')">4</button>
+              <button class="key btn btn-secondary" onclick="appendInput('5')">5</button>
+              <button class="key btn btn-secondary" onclick="appendInput('6')">6</button>
+              <button class="key btn btn-info" onclick="appendInput('-')">-</button>
+            </div>
+            <div class="row">
+              <button class="key btn btn-secondary" onclick="appendInput('1')">1</button>
+              <button class="key btn btn-secondary" onclick="appendInput('2')">2</button>
+              <button class="key btn btn-secondary" onclick="appendInput('3')">3</button>
+              <button class="key btn btn-info" onclick="appendInput('*')">*</button>
+            </div>
+            <div class="row">
+              <button class="key btn btn-secondary" onclick="appendInput('0')">0</button>
+              <button class="key btn btn-danger" onclick="clearInput()">C</button>
+              <button class="key btn btn-warning" onclick="calculate()">=</button>
+              <button class="key btn btn-info" onclick="appendInput('/')">/</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+    function appendInput(value) {
+      document.getElementById('output').value += value;
+    }
+
+    function clearInput() {
+      document.getElementById('output').value = '';
+    }
+
+    function calculate() {
+      try {
+        document.getElementById('output').value = eval(document.getElementById('output').value);
+      } catch (e) {
+        document.getElementById('output').value = 'Error';
+      }
+    }
+
+
+
+  </script>
+</body>
+
+</html>
